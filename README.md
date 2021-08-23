@@ -128,7 +128,7 @@ rule mlxg
 
 建议使用PCHunter提取，或者利用windbg手动提取（注意：PCHunter对LoadImage检测有问题）
 
-![image-20210709143306802](C:\Users\Syec\OneDrive\assets\image-20210709143306802.png)
+![image-20210709143306802](https://isyec-img.oss-cn-hongkong.aliyuncs.com/assets/image-20210709143306802.png)
 
 回调规则如下:
 
@@ -187,7 +187,7 @@ rule shutdown_callback2 {
 
 扫描驱动、服务对应的ImagePath，转而进行文件yara匹配删除
 
-![image-20210713162211868](C:\Users\Syec\OneDrive\assets\image-20210713162211868.png)
+![image-20210713162211868](https://isyec-img.oss-cn-hongkong.aliyuncs.com/assets/image-20210713162211868.png)
 
 ## 麻辣香锅-b
 
@@ -277,15 +277,15 @@ rule mlxg_b
 
 **系统回调**
 
-![image-20210701111354901](C:\Users\Syec\OneDrive\assets\image-20210701111354901.png)
+![image-20210701111354901](https://isyec-img.oss-cn-hongkong.aliyuncs.com/assets/image-20210701111354901.png)
 
 隐藏注册表扫描方案已弃用，因为紫狐注册表回调匹配规则有问题，会隐藏一大批注册项
 
-![image-20210701111059102](C:\Users\Syec\OneDrive\assets\image-20210701111059102.png)
+![image-20210701111059102](https://isyec-img.oss-cn-hongkong.aliyuncs.com/assets/image-20210701111059102.png)
 
 卡巴斯基TdssKiller同样会误报
 
-![image-20210722150506321](C:\Users\Syec\OneDrive\assets\image-20210722150506321.png)
+![image-20210722150506321](https://isyec-img.oss-cn-hongkong.aliyuncs.com/assets/image-20210722150506321.png)
 
 
 
@@ -315,11 +315,11 @@ Sality样本仅作线程注入清理样例，不提供sality感染文件修复�
 
 在被注入的进程中，逐个看线程堆栈找到了异常线程的起始点
 
-![image-20210729194143358](C:\Users\Syec\OneDrive\assets\image-20210729194143358.png)
+![image-20210729194143358](https://isyec-img.oss-cn-hongkong.aliyuncs.com/assets/image-20210729194143358.png)
 
 可以线程开始地址指向的是一个可执行程序，内存类型没有做伪装，就是Private
 
-![image-20210729193958478](C:\Users\Syec\OneDrive\assets\image-20210729193958478.png)
+![image-20210729193958478](https://isyec-img.oss-cn-hongkong.aliyuncs.com/assets/image-20210729193958478.png)
 
 这里取前0x100字节hash做特征码
 
@@ -350,5 +350,5 @@ rule sality_bh
 
 清理结果
 
-![image-20210809162405354](C:\Users\Syec\OneDrive\assets\image-20210809162405354.png)
+![image-20210809162405354](https://isyec-img.oss-cn-hongkong.aliyuncs.com/assets/image-20210809162405354.png)
 
